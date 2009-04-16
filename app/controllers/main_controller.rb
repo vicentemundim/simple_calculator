@@ -42,10 +42,10 @@ class MainController < RuGUI::BaseMainController
   end
 
   def property_numerical_keys_changed(model, new_value, old_value)
-    self.main_view.visor.text = new_value.join
+    self.main_view.display.text = new_value.join
   end
 
   def property_result_changed(model, new_value, old_value)
-    self.main_view.visor.text = new_value.to_s
+    self.main_view.display.text = new_value.to_s
   end
 end
