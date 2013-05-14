@@ -25,7 +25,7 @@ class MainController < RuGUI::BaseMainController
 
   (0..9).each do |numerical_key|
     on "num_#{numerical_key}_button", 'clicked' do |widget|
-      key = widget.name.match(/num_(\d)_button/)[1]
+      key = widget.builder_name.match(/num_(\d)_button/)[1]
       self.calculator.numerical_keys << key
     end
   end
@@ -36,7 +36,7 @@ class MainController < RuGUI::BaseMainController
 
   %w(sum subtraction multiplication division).each do |operation|
     on "#{operation}_operation_button", 'clicked' do |widget|
-      operation = widget.name.match(/([a-z]*)_operation_button/)[1]
+      operation = widget.builder_name.match(/([a-z]*)_operation_button/)[1]
       self.calculator.change_operation_to(operation)
     end
   end

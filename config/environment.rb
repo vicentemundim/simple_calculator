@@ -4,6 +4,8 @@
 # Bootstrap the RuGUI environment, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
 
+require 'debugger'
+
 RuGUI::Initializer.run do |config|
   # Settings in config/environments/* take precedence over those specified here.
   # Application configuration should go into files in config/initializers
